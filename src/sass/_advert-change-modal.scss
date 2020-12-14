@@ -1,0 +1,136 @@
+// Иконка закрытия
+
+.modal-close-icon {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+   
+   
+}
+
+.advert-modal {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    
+    // padding: 54px 105px 60px 105px;
+   
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 1);
+    // background-color: grey;
+
+
+    @media screen and (min-width: 769px) {
+        width: 861px;
+        max-height: 698px;
+        padding: 54px 105px 60px 105px;
+    }   
+    @media screen and (min-width: 321px) and (max-width: $tablet) {
+        max-width: 724px;
+        
+    }
+    @media screen and (max-width: $mobile) {
+        width: 290px;
+        padding: 54px 20px 60px 20px;
+    }
+  
+}
+.modal-title{
+    display: block;
+    font-size: 20px;
+    line-height: 1.17;
+    @media screen and (max-width: $mobile) {
+        margin-bottom: 20px;
+    }
+    // margin-bottom: 30px;
+}
+.modal-input-product{
+    // display: block;
+    font-size: 14px;
+    line-height: 1.17;
+    @media screen and (max-width: $mobile) {
+        margin-bottom: 10px;
+    }
+    // margin-right: 80px;
+    margin-bottom: 20px;
+
+}
+
+.modal-input{
+    height: 56px;
+    @media screen and (max-width: $mobile) {
+        margin-bottom: 20px;
+        width: 100%;
+        margin-top: 10px;
+        
+    }
+    // width: 440px;
+    // height: 56px;
+    // margin-left: 80px;
+}
+input[type="file"] {
+    display: none;
+}
+.upload-icon {
+    background-color:#F5F6FB;
+    @media screen and (max-width: $mobile) {
+        margin-bottom: 10px;
+        width: calc((100% - 20px) / 3);
+        height: 46px;
+        
+  
+    }
+    // width: 78px;
+    // height: 50px;
+  
+}
+.modal-upload{
+    font-size: 14px;
+    line-height: 1.17;
+    // background-color: ;
+    @media screen and (max-width: $mobile) {
+        margin-bottom: 10px;
+        // width: 100%;
+        
+    }
+
+    // display: flex;
+    
+}
+.upload-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @media screen and (max-width: $mobile) {
+        margin-top: 10px;
+        // width: 100%;
+        
+    }
+    
+
+}
+.modal-form-description {
+    display: block;
+    font-size: 14px;
+    line-height: 1.17;
+    @media screen and (max-width: $mobile) {
+        margin-top: 10px;
+        // width: 100%;
+        
+    }
+}
+.modal-buttom {
+    font-size: 12px;
+    line-height: 1.67;
+    background-color: $accent-color;
+    color: rgba(255, 255, 255, 1);
+    @media screen and (max-width: $mobile) {
+        margin-top: 10px;
+        width: 100%;
+        height: 50px;
+        
+    }
+}

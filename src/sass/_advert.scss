@@ -1,0 +1,249 @@
+// Иконка закрытия
+
+.modal-close-icon {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+   
+   
+}
+
+.advert-modal {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    
+    // padding: 54px 105px 60px 105px;
+   
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 1);
+    // background-color: grey;
+
+
+    @media screen and (min-width: 769px) {
+        width: 861px;
+        height: 668px;
+        padding: 54px 105px 143px 480px;
+    }   
+    @media screen and (min-width: 321px) and (max-width: $tablet) {
+        width: 724px;
+        padding: 57px 57px 200px 374px;
+        
+    }
+    @media screen and (max-width: $mobile) {
+        max-width: 290px;
+        padding: 55px 20px 60px 20px;
+    }
+  
+}
+.modal-title{
+    display: block;
+    font-size: 18px;
+    line-height: 1.17;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    margin-bottom: 5px;
+}
+.product-code {
+    font-size: 12px;
+    line-height: 1.17;
+    font-weight: 300;
+    color: rgba(135, 134, 134, 1);   
+    @media screen and (max-width: $mobile) {
+        margin-bottom: 20px;
+    }
+    @media screen and (min-width: 321px) and (max-width: $tablet) {
+      
+        margin-bottom: 30px;
+        
+    }
+    @media screen and (min-width: 769px) {
+        margin-bottom: 40px;
+    }   
+
+}
+.advert-img {
+    @media screen and (min-width: 769px) {
+        width: 380px;
+        height: 471px;
+        margin-bottom: 10px;
+    } 
+    @media screen and (max-width: $mobile) {
+    //    max-width: 253px;
+        max-width: 253px;
+        max-height: 253px;
+        margin-bottom: 15px;
+    }
+    @media screen and (min-width: 321px) and (max-width: $tablet) {
+        width: 281px;
+        height: 348px;
+        margin-bottom: 10px;
+    }
+    
+}
+.advert-preload {
+    @media screen and (max-width: $mobile) {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+    @media screen and (min-width: 321px)  {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    
+    
+}
+.advert-svg{
+    @media screen and (min-width: 321px) {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
+        padding: 0;
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+    }
+}
+.advert-price{
+    display: block;
+    font-size: 18px;
+    line-height: 1.17;
+    font-weight: 500;
+    @media screen and (min-width: 321px) {
+       
+        margin-bottom: 40px;
+    } 
+    @media screen and (max-width: $mobile) {
+    
+        margin-bottom: 30px;
+    }
+   
+    
+}
+.seller-information{
+    
+    color: rgba(255, 255, 255, 1);
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.02em;
+    padding-left: 40px;
+    padding-right: 40px;
+    @media screen and (min-width: 769px) {
+        width: 255px;
+        margin-bottom: 20px;
+    } 
+    @media screen and (max-width: $mobile) {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    @media screen and (min-width: 321px) and (max-width: $tablet) {
+        width: 300px;
+        margin-bottom: 20px;
+       
+    }
+    
+}
+.add-share{
+    display: flex;
+
+    
+    color: rgba(135, 134, 134, 1); 
+    // fill:  rgba(135, 134, 134, 1);
+    // fill: black;
+    // justify-content: center;
+    margin-bottom: 30px;
+    @media screen and (max-width: $mobile) {
+        justify-content: space-between;
+        
+    }
+     
+
+
+}
+.share:last-child {
+    @media screen and (min-width: 321px) {
+        margin-left: 47px;
+       
+    }
+}
+.share{
+    display: flex;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+   
+}
+.icon-share {
+    margin-left: 10px;
+}
+.micro-title {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    color: rgba(135, 134, 134, 1);
+    margin-bottom: 10px;
+}
+.advert-description {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+}
+.advert-main-img{
+    @media screen and (min-width: 768px) {
+        position: absolute;
+        top: 54px;
+        left: 60px;
+    }
+    @media screen and (min-width: 321px) and (max-width: $tablet) {
+        position: absolute;
+        top: 57px;
+        left: 57px;
+    }
+}
+.advert-img-preload{
+    @media screen and (min-width: 321px) and (max-width: $tablet) {
+        // width: 52px;
+        height: 56px;
+        background-color: rgba(245, 246, 251, 1);
+    }
+    // @media screen and (min-width: 768px) {
+    //     width: 68px;
+    //     height: 73px;
+        
+    // }
+    @media screen and (min-width: 768px) {
+        width: 68px;
+        height: 73px;
+        background-color: rgba(245, 246, 251, 1);
+    }
+}
+.advert-close-button{
+    border-style: none;
+    background-color: transparent;
+    position: absolute;
+    // transform: translate(-50%, -50%);
+    @media screen and (max-width: $mobile) {
+        top: 20px;
+        right: 20px;
+        
+    }
+    @media screen and (min-width: 321px){
+        top: 30px;
+        right: 30px;
+    }
+}
