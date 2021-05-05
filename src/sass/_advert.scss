@@ -9,12 +9,13 @@
 }
 
 .advert-modal {
+    z-index: 2;
     position: absolute;
     display: flex;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
+    transition: $animation-duration $animation-timing-function;
     
     // padding: 54px 105px 60px 105px;
    
@@ -133,14 +134,18 @@
 }
 .seller-information{
     
-    color: rgba(255, 255, 255, 1);
-    font-weight: 500;
+    
+    color: rgba(0, 0, 0, 1);
     font-size: 12px;
     line-height: 1.16;
     text-align: center;
     letter-spacing: 0.02em;
-    padding-left: 40px;
-    padding-right: 40px;
+    font-weight: 500;
+    height: 60px;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: solid 2px $accent-color;
+   border-style: none;
     @media screen and (min-width: 769px) {
         width: 255px;
         margin-bottom: 20px;
@@ -155,6 +160,42 @@
        
     }
     
+    
+}
+// .seller-information:active {
+//     background-color:$accent-color;
+//     display: flex;
+//     align-items: center;
+//     text-align: center;
+//     letter-spacing: 0.02em; 
+// }
+ 
+.seller{
+    color: rgba(255, 255, 255, 1);
+    
+    border: none;
+    background-color:$accent-color;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.seller-info-on{
+    // display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.02em; 
+    padding: 12px 27px;
+    & .seller-name {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1.16;
+    }
+    & .olx-time {
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 1.16;
+    }
+
+
 }
 .add-share{
     display: flex;
@@ -234,6 +275,7 @@
 }
 .advert-close-button{
     border-style: none;
+    outline-style: none;
     background-color: transparent;
     position: absolute;
     // transform: translate(-50%, -50%);

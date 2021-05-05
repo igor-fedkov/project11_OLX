@@ -1,25 +1,27 @@
-<!-- Бізнес та послуги -->
-<section class="section">
-    <div class="card-container">
-        <button type="button" class="swipe-left">
-            <svg width="6px" height="9px" class="swipe-left-icon">
-                <use href="./symbol-defs.svg#icon-arrow-left"></use>
-            </svg>
-        </button>
-        <button type="button" class="swipe-right">
-            <svg width="6px" height="9px" class="swipe-right-icon">
-                <use href="./symbol-defs.svg#icon-arrow-right"></use>
-            </svg>
-        </button>
-        <h2 class="section-name">
-            Бізнес та послуги<button type="button" class="show-all">Дивитися всі</button>
-        </h2>
+<section class="section" id={{this.id}}>
+    <div class="card-container card-container-slider">
+        <div class="header-categori">
+            <button type="button" class="swipe-left">
+                <svg width="6px" height="9px" class="swipe-left-icon">
+                    <use href="../symbol-defs.svg#icon-arrow-left"></use>
+                </svg>
+            </button>
+            <button type="button" class="swipe-right">
+                <svg width="6px" height="9px" class="swipe-right-icon">
+                    <use href="../symbol-defs.svg#icon-arrow-right"></use>
+                </svg>
+            </button>
+            <h2 class="section-name">
+                {{this.name}}<button type="button" class="show-all">Дивитися всі</button>
+            </h2>
+        </div>
         <ul class="card-field">
-            {{#each this}}
-            <li class="card-item">
+            {{#each this.data}}
+            <li class="card-item" id={{_id}} data-item='data-item' data-userId={{userId}}>
                 <div class="img-container">
-                    <img src="https://s1.eda.ru/StaticContent/Photos/140812180013/140820212258/p_O.jpg" alt="tshirt" />
-                    <button type="button" class="favorite">
+                    <img class="img-card" src={{imageUrls}} alt={{title}} />
+                    <button type="button" class="favorite" data-favorite-button='data-favorite-button'
+                        data-marked='false'>
                         <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"
                             class="favorite-icon">
                             <path
@@ -32,10 +34,18 @@
                         </svg>
                     </button>
                 </div>
-                <p class="product-title">Майка жіноча чорна</p>
-                <p><span class="old-price">300 грн</span><span class="hot-price">100 грн</span></p>
+                <p class="product-title">{{title}}</p>
+                {{#ifEquals isOnSale false}}
+                <p><span class="price"> {{price}} грн</span>
+                </p>
+                {{/ifEquals}}
+                {{#ifEquals isOnSale true}}
+                <p class={{!isOnSale && "234" }}><span class="old-price"> {{oldPrice}} грн</span><span
+                        class="hot-price">{{price}}</span></p>
+                {{/ifEquals}}
             </li>
             {{/each}}
         </ul>
+
     </div>
 </section>

@@ -21,7 +21,7 @@
   transform: translate(-50%, -50%);
   background-color: white;
   border: 1px solid 187, 187, 187, 1;
-  // margin-bottom: 30px;
+  margin-bottom: 30px;
   height: 100%;
   overflow: auto;
 
@@ -29,12 +29,12 @@
     top: 50%;
     width: 724px;
     height: auto;
-    overflow: auto;
+    // overflow: auto;
   }
   @media screen and (min-width: $desktop) {
     width: 861px;
     height: auto;
-    overflow: auto;
+    // overflow: auto;
   }
 }
 
@@ -43,9 +43,7 @@
   position: absolute;
   top: 20px;
   right: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
-  border-radius: 50%;
 
   display: flex;
   justify-content: center;
@@ -91,14 +89,24 @@
 }
 .add-modal-container {
   margin-top: 20px;
-  & + h3 {
-    margin-bottom: 10px;
-  }
+  align-items: center;
   @media screen and (min-width: $tablet) {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+}
+.add-modal-container h3 {
+  // margin-bottom: 10px;
+  @media screen and (min-width: $tablet) {
+    margin-right: 120px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-right: 174px;
+  }
+}
+.add-modal-container.add-photo-container {
+  justify-content: flex-start;
 }
 .add-modal-field {
   font-size: 14px;
@@ -106,6 +114,9 @@
   line-height: 16px;
   padding-bottom: 10px;
   display: inline-block;
+}
+.add-textarea {
+  resize: vertical;
 }
 .add-photo-btn {
   outline: 0;
@@ -165,12 +176,6 @@
   }
 }
 
-// .add-modal-dropdown {
-// }
-
-// .flex {
-//   display: flex;
-// }
 .add-modal-btn {
   background-color: $accent-color;
   align-content: center;
@@ -196,4 +201,42 @@
     width: 210px;
   }
 }
-
+.add-valid-error {
+  // display: inline-block;
+  text-align: right;
+  color: red;
+  font-size: 12px;
+  margin-left: auto;
+  margin-top: 5px;
+}
+.show-photo {
+  // opacity: 0;
+  display: none;
+}
+.preview-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.add-preview {
+  max-width: 74px;
+  max-height: 50px;
+  overflow: hidden;
+  margin: 5px;
+  @media screen and (min-width: $tablet) {
+    max-width: 84px;
+  }
+  @media screen and (min-width: $desktop) {
+    max-width: 79px;
+  }
+}
+.add-preview img {
+  max-width: 74px;
+  max-height: auto;
+  display: inline-block;
+  @media screen and (min-width: $tablet) {
+    max-width: 84px;
+  }
+  @media screen and (min-width: $desktop) {
+    max-width: 79px;
+  }
+}

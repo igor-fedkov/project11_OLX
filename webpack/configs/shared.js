@@ -1,4 +1,5 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const path = require('path');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const WebpackBar = require('webpackbar');
 const paths = require('../utils/paths');
@@ -63,13 +64,12 @@ module.exports = env => ({
       },
       {
         test: /\.hbs$/,
-        use: 'handlebars-loader',
+        loader: 'handlebars-loader',
+        options: {
+          runtime: path.resolve(__dirname, './../../src/handlebars.js'),
+        },
       },
     ],
   },
-  plugins: [
-    new CleanWebpackPlugin(),
-    new FriendlyErrorsWebpackPlugin(),
-    new WebpackBar(),
-  ],
+  plugins: [new CleanWebpackPlugin(), new FriendlyErrorsWebpackPlugin(), new WebpackBar()],
 });

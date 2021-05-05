@@ -1,6 +1,11 @@
 body {
   color: black;
   font-family: $primary-font;
+  margin: 0;
+}
+main {
+  background-color: $background-color;
+
 }
 
 html {
@@ -26,11 +31,11 @@ img {
   padding-right: 15px;
 
   @media screen and (min-width: $mobile) {
-    max-width: $mobile;
+    max-width: $tablet;
   }
 
   @media screen and (min-width: $tablet) {
-    max-width: $tablet;
+    max-width: $desktop;
     padding-left: 22px;
     padding-right: 22px;
   }

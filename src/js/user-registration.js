@@ -13,5 +13,5 @@ const options = {
   password: '123qwerty123',
   // password: document.querySelector('#idPaswordInput'),
 };
-//talkToApiServer(URL, keyPart, options);
+// talkToApiServer(URL, keyPart, options);
 // element.addEventListener('klick', talkToApiServer(URL, keyPart, options))

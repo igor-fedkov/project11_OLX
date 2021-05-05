@@ -1,0 +1,26 @@
+<div class="card-container scroll-search">
+  <ul class="card-field-wrap">
+    {{#each this}}
+      <li class="card-item ">
+        <div class="img-container">
+          <img src="{{imageUrls.[0]}}" alt="{{description}}" />
+          <button type="button" class="favorite">
+            <svg width="16px" height="16px" class="favorite-icon-marked">
+              <use href="./symbol-defs.svg#icon-heart"></use>
+            </svg>
+          </button>
+          <button type="button" class="full-screen">
+            <svg width="11px" height="11px" class="full-screen-icon">
+              <use href="./symbol-defs.svg#icon-full-screen"></use>
+            </svg>
+          </button>
+        </div>
+        <p class="product-title">{{title}}</p>
+        <p><span class="old-price final-price"> {{price}} грн</span></p>       
+      </li>
+    {{/each}}
+      
+  </ul>
+  <div id="sentinel"></div>
+</div>
+  

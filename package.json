@@ -1,5 +1,5 @@
 {
-  "name": "goit-olx",
+  "name": "project-olx",
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
@@ -11,14 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/igor-fedkov/project11_OLX.git"
+    "url": "git+https://github.com/igor-fedkov/project-olx.git"
+
   },
   "keywords": [],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/igor-fedkov/project11_OLX/issues"
+    "url": "https://github.com/igor-fedkov/project-olx/issues"
   },
-  "homepage": "https://igor-fedkov/project11_OLX",
+  "homepage": "https://igor-fedkov.github.io/project-olx",
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/plugin-proposal-class-properties": "^7.10.4",

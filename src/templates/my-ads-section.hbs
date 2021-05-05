@@ -1,0 +1,24 @@
+{{#each this}}
+<li class="card-item my-ads-item" id={{_id}} data-my-ads-item='data-my-ads-item'>
+    <div class="img-container">
+        <img src={{imageUrls.[0]}} alt={{description}} />
+        <button type="button" class="remove-ad" data-remove-ad-button='data-remove-ad-button'>
+            <svg width="16px" height="16px" class="remove-ad-icon">
+                <use href="./symbol-defs.svg#icon-delete"></use>
+            </svg>
+        </button>
+        <button type="button" class="edit-ad" data-edit-ad-button='data-edit-ad-button'>
+            <svg width="16px" height="16px" class="edit-ad-icon">
+                <use href="./symbol-defs.svg#icon-edit"></use>
+            </svg>
+        </button>
+        <button type="button" class="full-screen">
+            <svg width="11px" height="11px" class="full-screen-icon">
+                <use href="./symbol-defs.svg#icon-full-screen"></use>
+            </svg>
+        </button>
+    </div>
+    <p class="product-title">{{title}}</p>
+    <p><span class="old-price final-price"> {{price}} грн</span></p>
+</li>
+{{/each}}

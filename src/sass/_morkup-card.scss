@@ -9,20 +9,30 @@
   padding-right: 15px;
   max-width: 320px;
   padding-bottom: 60px;
-
-  border-top: 1px solid #e2e3e5;
+  overflow: hidden;
 }
 
 .card-item {
+  float: left;
   width: 290px;
   background-color: #fff;
-  margin-bottom: 30px;
+  margin: 10px;
   padding-bottom: 20px;
 
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.img-card {
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
 .img-container {
+  width: 290px;
+  height: 275px;
   position: relative;
 }
 
@@ -47,21 +57,41 @@
 @media screen and (min-width: $tablet) {
   .card-container {
     max-width: $tablet;
-    padding-left: 30px;
-    padding-right: 30px;
+
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .card-container-slider {
+    max-width: 728px;
   }
 
   .card-field {
+    width: $tablet;
+    display: block;
+    position: relative;
+    left: 0;
+
     display: flex;
-    flex-wrap: wrap;
     margin: -20px;
+    transition: all 500ms $animation-timing-function;
   }
+
+  .card-field-wrap {
+    flex-wrap: wrap;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
   .card-item {
-    width: calc((100% - 2 * 20px) / 2);
-    margin: 10px;
+    width: 352px;
+    margin-right: 20px;
   }
   .img-container {
     height: 275px;
+    width: 352px;
+
     overflow: hidden;
     margin-bottom: 20px;
   }
@@ -69,16 +99,34 @@
 
 @media screen and (min-width: $desktop) {
   .card-container {
-    max-width: 1280px;
-    padding-left: 30px;
-    padding-right: 30px;
+    max-width: $desktop;
+
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .card-container-slider {
+    max-width: 1240px;
+  }
+
+  .card-field-wrap {
+    flex-wrap: wrap;
+    display: flex;
+    // margin: 20px;
   }
 
   .card-item {
     width: 295px;
-    /* height: 350px; */
-    width: calc((100% - 4 * 20px) / 4);
+
     margin: 10px;
+  }
+
+  .img-container {
+    height: 275px;
+    width: 295px;
+
+    overflow: hidden;
+    margin-bottom: 20px;
   }
 }
 
@@ -130,7 +178,7 @@
 .full-screen-icon {
   fill: #fff;
   opacity: 0;
-
+  pointer-events: none;
   transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -185,6 +233,9 @@
 }
 
 /* FOOTER */
+footer {
+  background-color: white;
+}
 
 .footer-container {
   margin-left: auto;
@@ -354,7 +405,6 @@
     border: none;
     border-radius: 50%;
     background-color: #fff;
-    cursor: pointer;
     height: 30px;
     width: 30px;
 
@@ -376,12 +426,57 @@
   }
 
   .swipe-left {
-    left: 20px;
+    left: 0px;
     top: 10px;
   }
 
   .swipe-right {
-    right: 20px;
+    right: 0px;
     top: 10px;
   }
+}
+
+.pagination-conteiner {
+  background-color: #f5f6fb;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 320px;
+  padding-bottom: 60px;
+  overflow: hidden;
+  display: flex;
+}
+
+@media screen and (min-width: $tablet) {
+  .pagination-conteiner {
+    max-width: $tablet;
+
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .pagination-conteiner {
+    max-width: $desktop;
+
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.pagination {
+  border: none;
+  background-color: #fff;
+  width: 60px;
+  height: 60px;
+}
+.pagination:not(:last-child) {
+  margin-right: 1px;
+}
+
+.pagination.is-active {
+  background-color: #000;
+  color: #fff;
 }
