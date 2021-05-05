@@ -8,6 +8,9 @@ const KEYMEIN = '?page=';
 const KAYCATEGORY = '/specific/';
 let page = 1;
 
+  // console.log('location', window.location.href );
+  // debugger;
+
 const templateNames = {
   businessAndServices: 'Бізнес та послуги',
   electronics: 'Електроніка',
@@ -56,7 +59,9 @@ async function createCategoryMenu(e) {
   refs.paginatorPagesEL.classList.add('visually-hidden');
   clearArticlesContainer();
   const keyCategory = e.target.dataset.id;
-  history.replaceState({ keyCategory }, ` ${keyCategory}`, `/${keyCategory}`);
+  // debugger;
+  // console.log('location', window.location.href );
+  // history.replaceState({ keyCategory }, ` ${keyCategory}`, `/${keyCategory}`);
   await postData(KAYCATEGORY, keyCategory).then(data => {
     // console.log('---', data);
 
@@ -77,7 +82,9 @@ async function postData(apiKey, arg) {
 }
 
 async function getCard(page) {
-  history.replaceState({ page }, `page: ${page}`, `/page=${page}`);
+  // debugger;
+  // console.log('location', window.location.href );
+  // history.replaceState({ page }, `page: ${page}`, `/page=${page}`);
   refs.paginatorPagesEL.classList.remove('visually-hidden');
   clearArticlesContainer();
 
@@ -88,10 +95,12 @@ async function getCard(page) {
 }
 
 function changePage(e) {
+  // debugger;
+  // console.log('location', window.location.href );
   page = e.target.dataset.id;
-  history.replaceState({ page }, `page: ${page}`, `/page=${page}`);
-  const oldEl = document.querySelector(`.is-active`);
-  oldEl.classList.remove('.is-active');
+  // history.replaceState({ page }, `page: ${page}`, `/page=${page}`);
+  const oldEl = document.querySelector('.is-active');
+  oldEl.classList.remove('is-active');
   e.target.classList.add('is-active');
   getCard(page);
 }
@@ -111,7 +120,9 @@ function renderMainContent(data) {
 
 function showAll(id) {
   return function () {
-    history.replaceState({ id }, ` ${id}`, `/${id}`);
+    // debugger;
+    // console.log('location', window.location.href );
+    // history.replaceState({ id }, ` ${id}`, `/${id}`);
     const listCardEL = document.querySelector(`#${id} .card-field`);
     const headerCategoridEL = document.querySelector(`#${id} .header-categori`);
     const CategoridEL = document.querySelectorAll(`.section`);

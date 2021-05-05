@@ -7,6 +7,7 @@ const closeButtonEl = myAdsSectionEl.querySelector('#close-my-ads-button');
 const myAdsListEl = myAdsSectionEl.querySelector('#my-ads-list');
 const showMyAdsButtonEl1 = document.querySelector('#show-my-ads-button1');
 const showMyAdsButtonEl2 = document.querySelector('#show-my-ads-button2');
+const listItemsMyOffice = document.querySelectorAll('.js-list-my-off');
 
 // console.log(showMyAdsButtonEl1);
 // console.log(showMyAdsButtonEl2);
@@ -27,12 +28,14 @@ showMyAdsButtonEl1.addEventListener('click', e => {
   e.preventDefault();
   openModalWindow(addBackdropEl);
   getMyAdsList(URL, keyPart, options);
+  onBtnMyOffice();
 });
 // -- для таблетки и мобилки
 showMyAdsButtonEl2.addEventListener('click', e => {
   e.preventDefault();
   openModalWindow(addBackdropEl);
   getMyAdsList(URL, keyPart, options);
+  onBtnMyOffice();
 });
 
 // закрытие модалки по кнопке
@@ -82,4 +85,8 @@ function closeModalByOverlayClick(evt) {
   } else {
     return;
   }
+}
+
+function onBtnMyOffice() {
+	listItemsMyOffice.forEach(btn => btn.classList.toggle('visually-hidden'));
 }

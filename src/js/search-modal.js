@@ -64,7 +64,7 @@ function onOpenModal(evt) {
   if (evt.target.parentElement.nodeName !== 'BUTTON') {
     return;
   }  
-  backdropS.classList.add('is-open');  
+  backdropS.classList.remove('visually-hidden');  
   
   window.addEventListener('keydown', onEscKeyPress);  
   closeBtn.addEventListener('click', onCloseModal,{once:true});  
@@ -119,7 +119,7 @@ function onEscKeyPress(evt) {
 };
 
 function onCloseModal() {  
-  backdropS.classList.remove('is-open');  
+  backdropS.classList.add('visually-hidden');  
   window.removeEventListener('keydown', onEscKeyPress);
 };
 

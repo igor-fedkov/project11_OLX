@@ -169,7 +169,7 @@
   </footer>
   <!-- МОДАЛКИ -->
   <!-- Модалка поиска -->
-  <div class="search-modalS backdropS  ">
+  <div class="search-modalS backdropS visually-hidden">
     <div class="fone-modalS">
       <button type="submit" class="aBtn" data-action="close-searchModalS">
         <svg class="icon-c">
@@ -323,8 +323,8 @@
       <a class="btn-google-autorisation" href="https://callboard-backend.herokuapp.com/auth/google">
         <svg class="icon-google" width="18px" height="18px" aria-label="Логотип Google">
           <use href="./symbol-defs.svg#icon-google""></use>
-            </svg>
-            <span class=" label-google-btn">Google</span>
+        </svg>
+        <span class=" label-google-btn">Google</span>
       </a>
       <p class="offer-to-login">Або зайти за допомогою імейлу і пароля, попередньо зареєструвавшись:</p>
       <form class="modal-form" action="input">
@@ -343,7 +343,7 @@
 
   <!-- Modal просмотр чужого объявления ,  -->
   <!-- присвоить модалке класс is-hidden -->
-  <div class="add-backdrop is-hidden js-advert-open">
+  <div class="add-backdrop visually-hidden js-advert-open">
     <div class="advert-modal">
       <article>
         <button type="button" class="advert-close-button js-advert-close">

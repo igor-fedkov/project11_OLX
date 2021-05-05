@@ -8,6 +8,7 @@ const closeButtonEl = favoriteSectionEl.querySelector('#close-section-button');
 const fevoritesListEl = favoriteSectionEl.querySelector('#favourites-list');
 const showFavoriteButtonEl1 = document.querySelector('#show-favorites-button1');
 const showFavoriteButtonEl2 = document.querySelector('#show-favorites-button2');
+const listItemsMyOffice = document.querySelectorAll('.js-list-my-off');
 // console.log(showFavoriteButtonEl1);
 // console.log(showFavoriteButtonEl2);
 
@@ -26,12 +27,14 @@ showFavoriteButtonEl1.addEventListener('click', e => {
   e.preventDefault();
   openModalWindow(addBackdropEl);
   getFavoritesList(URL, keyPart, options);
+  onBtnMyOffice();
 });
 // для таблетки и мобилки
 showFavoriteButtonEl2.addEventListener('click', e => {
   e.preventDefault();
   openModalWindow(addBackdropEl);
   getFavoritesList(URL, keyPart, options);
+  onBtnMyOffice();
 });
 
 // Вызов функции закрытия модалки по кнопке
@@ -79,4 +82,8 @@ function closeModalByOverlayClick(evt) {
   } else {
     return;
   }
+}
+
+function onBtnMyOffice() {
+	listItemsMyOffice.forEach(btn => btn.classList.toggle('visually-hidden'));
 }

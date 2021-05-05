@@ -94,7 +94,7 @@ function addModalAdvert(event) {
     changeAdvertTitle(target);
     
     // открыть модалку
-    refsAdvert.openModal.classList.remove('is-hidden');
+    refsAdvert.openModal.classList.remove('visually-hidden');
     
    
   
@@ -106,7 +106,7 @@ function addModalAdvert(event) {
 
 // Функции закрытия модалки
 function modalClose() {
-  refsAdvert.openModal.classList.add('is-hidden');
+  refsAdvert.openModal.classList.add('visually-hidden');
   refsAdvert.addShare.id = '';
 }
 function modalEscClose(evt) {

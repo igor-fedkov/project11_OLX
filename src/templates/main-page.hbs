@@ -4,7 +4,7 @@
             {{#each this.data}}
             <li class="card-item" id={{_id}} data-userId={{userId}} data-item='data-item'>
                 <div class="img-container">
-                    <img class="img-card" src={{imageUrls}} alt={{title}} />
+                    <img class="img-card" src={{imageUrls.[0]}} alt={{title}} />
                     <button type="button" class="favorite"
                      data-favorite-button='data-favorite-button'
                      data-marked='false'>
